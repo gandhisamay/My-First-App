@@ -13,6 +13,9 @@ It will classify the user based on his responses into one or more of the followi
 6. **Strange**
 7. **Bad character**
 
+# UI
+![](https://github.com/gandhisamay/Personality-Check-App/blob/master/Screenshot%20(324).png)
+
 ## License 
 **Free to download and use software!**
 
