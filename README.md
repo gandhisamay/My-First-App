@@ -3,7 +3,7 @@ In this app, you will be tested through series of questions and based on your re
 
 So just download the app and install it and get going and know what kind of personality you are!
 
-It will classify the user based on his responses into one or more of the following categories:
+It will classify the user based on his responses into one or more of the following categories
 
 1. **Calm attitude**
 2. **Kind**
@@ -16,8 +16,4 @@ It will classify the user based on his responses into one or more of the followi
 ## License 
 Free to download and use software!
 
-
-
-
-
-~Strange humans aren't strange anymore! 
+                                                                                                                                            ~Strange humans aren't strange anymore! 
