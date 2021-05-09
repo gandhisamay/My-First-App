@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import './question.dart';
+import './Quiz.dart';
+import './Result.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,10 +17,19 @@ class MyApp extends StatefulWidget {
 
 class MyAppState extends State<MyApp> {
   var index = 0;
-  var questions = ['What is your gender ?', 'How is your health ?'];
-  var answers = [
-    ['Male', 'Female', 'Transgender'],
-    ['Excellent', 'Good', 'Bad']
+  var questions = [
+    {
+      'questionText': 'What is your favourite color ?',
+      'answers': ['blue', 'black', 'green', 'red'],
+    },
+    {
+      'questionText': 'What is your favourite animal ?',
+      'answers': ['cat', 'dog', 'horse', 'lion'],
+    },
+    {
+      'questionText': 'How is your health?',
+      'answers': ['excellent', 'good', 'bad', 'severe'],
+    }
   ];
 
   void answerQuestion() {
@@ -32,22 +42,17 @@ class MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-            appBar: AppBar(
-              title: Text('Quiz App'),
-            ),
-            body: Column(
-              children: [
-                Question(questions[index]),
-                // ignore: deprecated_member_use
-                RaisedButton(
-                    child: Text(answers[index][0]), onPressed: answerQuestion),
-                // ignore: deprecated_member_use
-                RaisedButton(
-                    child: Text(answers[index][1]), onPressed: answerQuestion),
-                // ignore: deprecated_member_use
-                RaisedButton(
-                    child: Text(answers[index][2]), onPressed: answerQuestion),
-              ],
-            )));
+      appBar: AppBar(
+        title: Text('Quiz App'),
+        backgroundColor: Colors.blue,
+      ),
+      body: index < questions.length
+          ? Quiz(
+              answerQuestion: answerQuestion,
+              index: index,
+              questions: questions,
+            )
+          : Result(),
+    ));
   }
 }
