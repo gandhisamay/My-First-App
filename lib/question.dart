@@ -8,9 +8,8 @@ class Question extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 4,
       child: Container(
-          margin: EdgeInsets.only(left: 25, right: 25, top: 10, bottom: 10),
+          margin: EdgeInsets.only(left: 25, right: 25, top: 25, bottom: 10),
           width: double.infinity,
           child: Text(
             questionText,

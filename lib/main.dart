@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-
 import './Quiz.dart';
 import './Result.dart';
+import './question_number_bar.dart';
 
 void main() {
   runApp(MyApp());
@@ -52,13 +52,20 @@ class MyAppState extends State<MyApp> {
         title: Text('Personality Check'),
         backgroundColor: Colors.blue,
       ),
-      body: index < questions.length
-          ? Quiz(
-              answerQuestion: answerQuestion,
-              index: index,
-              questions: questions,
-            )
-          : Result(resetIndex),
+      body: Column(
+        children: [
+          QuestionNumBar(index),
+          Container(
+            child: index < questions.length
+                ? Quiz(
+                    answerQuestion: answerQuestion,
+                    index: index,
+                    questions: questions,
+                  )
+                : Result(resetIndex),
+          ),
+        ],
+      ),
     ));
   }
 }
