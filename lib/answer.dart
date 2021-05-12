@@ -7,15 +7,24 @@ class Answer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      child:
-          // ignore: deprecated_member_use
-          RaisedButton(
-        child: Text(answer),
-        onPressed: selectHandler,
-        textColor: Colors.white,
-        color: Colors.blue,
+    return Card(
+      child: Container(
+        margin: EdgeInsets.only(left: 25, right: 25, top: 10, bottom: 10),
+        width: double.infinity,
+        child:
+            // ignore: deprecated_member_use
+            FlatButton(
+          child: Text(
+            answer,
+            style: TextStyle(
+              fontWeight: FontWeight.w900,
+              fontSize: 18,
+            ),
+          ),
+          onPressed: selectHandler,
+          textColor: Colors.black,
+          color: Colors.white,
+        ),
       ),
     );
   }

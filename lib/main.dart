@@ -38,6 +38,12 @@ class MyAppState extends State<MyApp> {
     });
   }
 
+  void resetIndex() {
+    setState(() {
+      index = 0;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -52,7 +58,7 @@ class MyAppState extends State<MyApp> {
               index: index,
               questions: questions,
             )
-          : Result(),
+          : Result(resetIndex),
     ));
   }
 }
