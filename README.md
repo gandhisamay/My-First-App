@@ -19,4 +19,4 @@ It will classify the user based on his responses into one or more of the followi
 ## License 
 **Free to download and use software!**
 
-~Strange humans aren't strange anymore! 
+~Finding strange humans isn't strange anymore! 
