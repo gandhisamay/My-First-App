@@ -20,3 +20,5 @@ It will classify the user based on his responses into one or more of the followi
 **Free to download and use software!**
 
 ~Finding strange humans isn't strange anymore! 
+
+~Under development 
